@@ -23,7 +23,7 @@ const create = async (req, res, next) => {
             userId: req.payload.id});
         res.status(201).json(result);
     } catch (e) {
-        res.status(400).json({ error: e.message });
+        res.status(400).json({ error: "Cannot create message" });
     }
 }
 
