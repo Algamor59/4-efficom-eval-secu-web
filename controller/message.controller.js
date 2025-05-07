@@ -1,7 +1,7 @@
-const Message = require('../model/role.schema.js');
+const Message = require('../model/message.schema.js');
 
 const getAll = (req, res, next) => {
-    let result = Role.findAll();
+    let result = Message.findAll();
     res.status(200).json(result);
 }
 
