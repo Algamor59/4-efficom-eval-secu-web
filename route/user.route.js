@@ -8,8 +8,8 @@ router.get('/:id', userController.getById);
 
 router.post('/', userController.create);
 
-router.put('/:id', userController.update);
-router.delete('/:id', userController.remove);
+router.put('/:id',auth, userController.update);
+router.delete('/:id',auth, userController.remove);
 
 router.put('/role/:userId/:roleId', auth("Admin"), userController.addRole);
 router.delete('/role/:userId/:roleId', auth("Admin"),userController.removeRole);
