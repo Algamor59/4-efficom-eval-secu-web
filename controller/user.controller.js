@@ -20,7 +20,7 @@ const getById = async (req, res, next) => {
 const create = async (req, res, next) => {
     let member = await Role.findOne({ where: { name: "Member" } });
     if (!member) {
-        return res.status(404).json({ message: "Le rôle Member n'as pas été trouvé" });
+        return res.status(404).json({ message: "Erreur lors de la création du compte" });
     }
     try {
         let result = await User.create({
